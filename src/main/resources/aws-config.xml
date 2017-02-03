@@ -17,20 +17,25 @@
 
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xmlns:aws-context="http://www.springframework.org/schema/cloud/aws/context"
+	   xmlns:aws-messaging="http://www.springframework.org/schema/cloud/aws/messaging"
 	   xmlns="http://www.springframework.org/schema/beans"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
 	   					   http://www.springframework.org/schema/beans/spring-beans.xsd
 	   					   http://www.springframework.org/schema/cloud/aws/context
-	   					   http://www.springframework.org/schema/cloud/aws/context/spring-cloud-aws-context.xsd">
+	   					   http://www.springframework.org/schema/cloud/aws/context/spring-cloud-aws-context.xsd
+	   					   http://www.springframework.org/schema/cloud/aws/messaging
+	   					   http://www.springframework.org/schema/cloud/aws/messaging/spring-cloud-aws-messaging">
 
 	<aws-context:context-credentials>
-		<aws-context:simple-credentials access-key="first2" secret-key="first" />
+		<aws-context:simple-credentials access-key="" secret-key="" />
 	</aws-context:context-credentials>
-
+	
+	<aws-messaging:queue-messaging-template id="device" />
+	
 	<aws-context:context-resource-loader region-provider="customRegionProvider" />
-
+	
 	<bean id="customRegionProvider" class="org.springframework.cloud.aws.core.region.StaticRegionProvider">
-      <constructor-arg value="us-west-2" />
+      <constructor-arg value="sa-east-1" />
 	</bean>
 
 	<bean class="org.springframework.cloud.aws.context.config.xml.ContextResourceLoaderBeanDefinitionParserTest$ResourceLoaderBean" />

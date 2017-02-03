@@ -31,6 +31,15 @@ dependencies {
     compile("mysql:mysql-connector-java")
     compile("org.springframework.cloud:spring-cloud-starter-aws")
     compile("org.springframework.cloud:spring-cloud-aws")
+    compile("org.springframework.cloud:spring-cloud-aws-messaging")
+    compile("org.springframework.cloud:spring-cloud-aws-autoconfigure")
+    
+	compile group: 'com.amazonaws', name: 'aws-java-sdk-sqs', version: '1.11.86'
+	
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-aws-messaging', version: '1.0.0.RELEASE'
+	
+    
+    
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 
