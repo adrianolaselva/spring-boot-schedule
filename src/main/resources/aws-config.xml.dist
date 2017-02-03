@@ -24,7 +24,7 @@
 	   					   http://www.springframework.org/schema/cloud/aws/context/spring-cloud-aws-context.xsd">
 
 	<aws-context:context-credentials>
-		<aws-context:simple-credentials access-key="first2" secret-key="first" />
+		<aws-context:simple-credentials access-key="first" secret-key="first" />
 	</aws-context:context-credentials>
 
 	<aws-context:context-resource-loader region-provider="customRegionProvider" />

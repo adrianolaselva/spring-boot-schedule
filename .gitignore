@@ -29,3 +29,8 @@ build/
 
 dependency-reduced-pom.xml
 README.html
+
+# Ignora arquivo com configura√√es
+src/main/resources/aws-config.xml
+src/main/resources/application.properties
+
